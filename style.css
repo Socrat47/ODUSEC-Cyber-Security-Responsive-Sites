@@ -1,0 +1,581 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(odusec-background.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: azure;
+  font-family: "Open Sans", sans-serif;
+}
+
+span {
+  color: red;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #000000cc;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  width: 98.5%;
+}
+
+header .logo h2 {
+  font-size: 48px;
+  color: silver;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+header .logo h2 a {
+  text-decoration: none;
+  color: silver;
+}
+
+header .logo h2 span {
+  color: red;
+}
+
+header .list .basliklar {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+header .list .basliklar li {
+  font-size: 18px;
+}
+
+header .list .basliklar a {
+  text-decoration: none;
+  color: azure;
+  transition: 0.3s ease-in;
+}
+
+header .list .basliklar a:hover {
+  color: red;
+}
+
+header .list .basliklar button {
+  background-color: #000000cc;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+header .list .basliklar i {
+  font-size: 42px;
+  color: red;
+}
+
+.back-list {
+  position: absolute;
+  background-color: #000000cc;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: right 0.5s ease-in-out;
+  display: none;
+  right: 16px;
+}
+
+.back-list .basliklar {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 70px;
+}
+
+.back-list a {
+  text-decoration: none;
+  color: azure;
+  font-size: 24px;
+}
+
+.back-list a:hover {
+  background-color: silver;
+  color: red;
+  padding: 1px;
+}
+
+.anasayfa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.anasayfa .hero {
+  width: 450px;
+  height: 390px;
+  overflow: hidden;
+}
+
+.anasayfa .hero img {
+  width: 450px;
+  height: 450px;
+  align-items: center;
+}
+
+.anasayfa .yazi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.anasayfa .yazi h3 {
+  font-size: 50px;
+}
+
+.anasayfa .yazi p {
+  font-size: 40px;
+}
+
+.anasayfa .button {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.anasayfa .button .btn {
+  width: 180px;
+  height: 50px;
+  background-color: red;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  padding: 3px;
+  box-shadow: 0px 0px 30px red;
+  border-bottom: 6px solid silver;
+}
+
+.anasayfa .button .btn:hover {
+  background-color: greenyellow;
+  color: rgb(248, 41, 0);
+  box-shadow: 0px 0px 30px greenyellow;
+}
+
+.anasayfa .button .btn:active {
+  border-bottom: none;
+}
+
+.anasayfa .button .btn a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.hakkimizda {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 190px;
+  border-top: 3px solid silver;
+}
+
+.hakkimizda .logo img {
+  width: 400px;
+  height: 400px;
+}
+
+.hakkimizda .info {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px;
+}
+
+.hakkimizda .info .baslik {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hakkimizda .info .baslik h3 {
+  font-size: 48px;
+}
+
+.hakkimizda .info h4 {
+  font-size: 24px;
+}
+
+.faaliyetler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid silver;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.faaliyetler .vizyon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faaliyetler .vizyon h3 {
+  font-size: 40px;
+  color: red;
+}
+
+.faaliyetler .vizyon p {
+  text-align: center;
+}
+
+.faaliyetler .misyon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faaliyetler .misyon h3 {
+  font-size: 40px;
+  color: silver;
+}
+
+.faaliyetler .misyon p {
+  text-align: center;
+  color: red;
+}
+
+.etkinlikler-baslik {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.etkinlikler-baslik h1 {
+  font-size: 40px;
+  color: red;
+}
+
+.etkinlikler {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 60px;
+}
+
+.etkinlikler .card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  width: 250px;
+  height: 350px;
+  border: 1px solid silver;
+  box-shadow: 0px 0px 20px silver;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  transition: 0.3s all ease-in;
+}
+
+.etkinlikler .card:hover {
+  box-shadow: 0px 0px 40px red;
+}
+
+.etkinlikler .card .icons {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+}
+
+.etkinlikler .card .icons i {
+  font-size: 60px;
+}
+
+.etkinlikler .card .baslik h3 {
+  font-size: 35px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.etkinlikler .card .info p {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+/* .faaliyetler .etkinlikler{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.faaliyetler .etkinlikler h3{
+    font-size: 40px;
+    color: red;
+}
+
+.faaliyetler .etkinlikler h4{
+    font-size: 25px;
+    color: silver;
+}
+
+.faaliyetler .etkinlikler li{
+    list-style: none;
+} */
+
+.sup-baslik {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  font-size: 30px;
+  border-top: 3px solid silver;
+}
+
+.sponsor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
+}
+
+.sponsor .card {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000cc;
+  width: 320px;
+  height: 340px;
+  border-radius: 12px;
+  margin-left: 20px;
+  margin-top: 20px;
+  align-items: center;
+  border: 2px solid silver;
+  transition: 0.3s all;
+}
+
+.sponsor .card:hover {
+  box-shadow: 0px 0px 20px silver;
+}
+
+.sponsor .card .logo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+}
+
+.sponsor .card .info h3 {
+  font-size: 24px;
+}
+
+.sponsor .card .button .btn {
+  margin-top: 25px;
+  margin-left: 170px;
+  width: 200px;
+  height: 30px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s all;
+  color: red;
+}
+
+.sponsor .card .button .btn a {
+  text-decoration: none;
+  color: red;
+}
+
+.sponsor .card .button i {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.sponsor .card .button .btn:hover {
+  opacity: 0.8;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  margin-top: 100px;
+}
+
+footer .icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+footer .icons a {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  background-color: #000000cc;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+footer .icons a:hover {
+  opacity: 0.8;
+}
+
+footer .icons .bi-instagram {
+  background: linear-gradient(#c13584, #f77737);
+}
+
+footer .icons .bi-linkedin {
+  background-color: rgb(50, 50, 251);
+}
+
+footer .icons .bi-discord {
+  background-color: #5562ea;
+}
+
+footer .bottom-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+footer .bottom-page .sayfalar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  list-style: none;
+}
+
+footer .bottom-page .sayfalar li {
+  background-color: silver;
+  padding: 5px;
+}
+
+footer .bottom-page .sayfalar li:hover {
+  background-color: #5562ea;
+  font-weight: bold;
+}
+
+footer .bottom-page .sayfalar a {
+  text-decoration: none;
+  color: #000000cc;
+}
+
+footer .founder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+footer .founder a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+footer .founder a:hover {
+  color: #5562ea;
+}
+
+footer .founder span {
+  color: black;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(odusec-background2.gif);
+    background-size: cover;
+  }
+
+  header .logo h2 {
+    font-size: 30px;
+  }
+
+  header .list .basliklar .baslik {
+    display: none;
+  }
+
+  header .list .basliklar button {
+    display: block;
+  }
+
+  header .list .basliklar i {
+    font-size: 36px;
+  }
+
+  .anasayfa .hero {
+    width: 400px;
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .anasayfa .hero img {
+    width: 400px;
+    height: 350px;
+    align-items: center;
+  }
+
+  .anasayfa .yazi h3 {
+    font-size: 35px;
+  }
+
+  .anasayfa .yazi p {
+    font-size: 26px;
+  }
+
+  .hakkimizda .logo img {
+    display: none;
+  }
+
+  .etkinlikler {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .sponsor {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer .founder{
+    font-size: 15px;
+    gap: 2px;
+  }
+
+  footer .bottom-page .sayfalar li{
+    padding: 1px;
+  }
+}
